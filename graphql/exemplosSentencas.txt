@@ -1,0 +1,33 @@
+{
+  posts {
+    id
+    title
+    user {
+      name
+    }
+    comments {
+      id 
+
+    }
+  }
+  
+  users {
+    data {
+   	 name
+    }
+  }
+}
+
+mutation{
+  createUser(name: "Luke Skywalker", email: "luke@gmail.com", password: "123456"){
+      id
+      name
+  }
+
+  updateUser(id:  email: "luke@examplo.com"){
+      id
+      name
+      email
+  }
+}
+  
