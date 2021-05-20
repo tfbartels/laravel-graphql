@@ -42,6 +42,8 @@ $ php artisan serve
 
 ```bash
 php artisan lighthouse:mutation createPost  
+
+php artisan lighthouse:query findPost  
 ```
 
 ## 📝 Licença
