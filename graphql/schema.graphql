@@ -35,12 +35,14 @@ type Query {
     user(id: ID @eq): User @find
 
     posts: [Post] @all
-    post(id: Int! @eq): Post @find
+    findPost(id: Int! @eq): Post
 }
 
 
 type Mutation {
     createUser(name: String!, email: String!, password: String!): User @create
     updateUser(id: ID!, name: String, email: String, password: String): User @update
-    deleteUser(id: ID): User
+    deleteUser(id: ID!): User @delete
+
+    createPost(title: String!, content: String!, user_id: Int!): Post
 }
